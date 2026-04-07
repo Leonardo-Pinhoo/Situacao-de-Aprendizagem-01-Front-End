@@ -9,13 +9,13 @@
 </head>
 
 <body>
-        <form>
-            <div class="container">
+    <!-- Formulário de Cadastro -->
+    <form>
+        <div class="container">
             <h2>Cadastro de Usuário</h2>
             <div class="container-input">
                 <label>Nome:</label>
                 <input type="text" id="nome" class="input" placeholder="Digite seu nome" required><br>
-                <span id="msgNome"></span>
             </div>
             <div class="container-input">
                 <label>Email:</label>
@@ -25,7 +25,7 @@
             <div class="container-input">
                 <label>Senha:</label>
                 <input type="password" id="senha" class="input" placeholder="Digite sua senha" required><br>
-                <i class="bi bi-eye-fill icon" id="eye"></i>
+                <i class="bi bi-eye-fill icon" id="eye"></i> <!-- Ícone para mostrar/ocultar senha -->
                 <span id="msgSenha"></span>
             </div>
             <div class="container-input">
@@ -41,15 +41,16 @@
             </div>
             <div class="container-input">
                 <label>Telefone/s:</label>
-                <input type="text" id="telefone" class="input" placeholder="Digite seu/s telefone/s" required maxlength="11"><br>
+                <input type="text" id="telefone" class="input" placeholder="Digite seu/s telefone/s" required
+                    maxlength="11"><br>
                 <i class="bi bi-plus-circle icon" id="plus"></i>
                 <span id="msgTelefone"></span>
                 <ul id="lista"></ul>
             </div>
-            <button type="button" id="cadastrar">Cadastrar</button><br>
+            <button type="button" id="cadastrar">Cadastrar</button><br> <!-- Botão para cadastrar -->
 
             <span id="msgButton"></span>
-        </form>
+    </form>
 
 
     <script src="script.js"></script>

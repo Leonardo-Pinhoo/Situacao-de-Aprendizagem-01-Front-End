@@ -1,7 +1,6 @@
 let botaoCadastrar = document.querySelector("#cadastrar"); // Variável para o botão de cadastro
 let msgButton = document.querySelector("#msgButton"); // Variável para a mensagem de feedback do botão
 let nome = document.querySelector("#nome"); // Variável para o campo de nome
-let msgNome = document.querySelector("#msgNome"); // Variável para a mensagem de feedback do campo de nome
 let email = document.querySelector("#email"); // Variável para o campo de email
 let msgEmail = document.querySelector("#msgEmail"); // Variável para a mensagem de feedback do campo de email
 let senha = document.querySelector("#senha"); // Variável para o campo de senha
@@ -22,7 +21,7 @@ let mascara = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 function validarSenha(senha) {
     let tamanho = senha.trim().length;
 
-    if (tamanho < 6) { 
+    if (tamanho < 6) {
         msgSenha.style.color = "red";
         msgSenha.textContent = "Senha fraca!";
     } else if (tamanho <= 10) {
@@ -42,7 +41,7 @@ function validarSenha(senha) {
 email.addEventListener('keyup', function () {
     if (!mascara.test(email.value)) {
         msgEmail.style.color = "red";
-        msgEmail.textContent =   "Email inválido!";
+        msgEmail.textContent = "Email inválido!";
     } else {
         msgEmail.style.color = "green";
         msgEmail.textContent = "Email valido!";
@@ -85,7 +84,7 @@ botaoCadastrar.addEventListener('click', function () {
         msgButton.style.color = "red";
         msgButton.textContent = "Preencha os campos corretamente!";
     }
-        else {
+    else {
         msgButton.style.color = "green";
         msgButton.textContent = "Cadastro realizado com sucesso!";
     }
@@ -98,6 +97,7 @@ plus.addEventListener('click', function () {
     let menos = document.createElement("i"); // Cria um novo elemento de ícone para o botão de excluir telefone adicional
 
     inputTelefone.type = "text";
+    inputTelefone.setAttribute("maxlength", 11);
     inputTelefone.placeholder = "Digite outro telefone";
     inputTelefone.classList.add("input"); // Adiciona a classe "input" para manter o estilo consistente com os outros campos de telefone
     menos.classList.add("bi", "bi-x-circle", "excluir-icon"); // Adiciona as classes do Bootstrap para o ícone de excluir e a classe personalizada para posicionamento
